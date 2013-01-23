@@ -1,0 +1,9 @@
+setup.cfg
+setup.py
+uziela/__init__.py
+uziela.egg-info/PKG-INFO
+uziela.egg-info/SOURCES.txt
+uziela.egg-info/dependency_links.txt
+uziela.egg-info/entry_points.txt
+uziela.egg-info/not-zip-safe
+uziela.egg-info/top_level.txt
