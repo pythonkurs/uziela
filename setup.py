@@ -5,6 +5,7 @@ version = '0.1'
 
 setup(name='uziela',
       version=version,
+      scripts = ['scripts/getting_data.py'],
       description="package for python course",
       long_description="""\
 package for python course where I will put my code""",

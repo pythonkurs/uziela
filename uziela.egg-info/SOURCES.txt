@@ -1,5 +1,6 @@
 setup.cfg
 setup.py
+scripts/getting_data.py
 uziela/__init__.py
 uziela.egg-info/PKG-INFO
 uziela.egg-info/SOURCES.txt
