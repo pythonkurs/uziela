@@ -2,7 +2,7 @@
 
 # Written by Karolis Uziela in 2013
 
-from uziela import parse_outages
+from uziela.session2 import parse_outages
 
 XML_file = "http://www.grandcentral.org/developers/data/nyct/nyct_ene.xml"
 

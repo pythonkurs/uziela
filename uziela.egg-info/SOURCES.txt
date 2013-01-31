@@ -1,7 +1,10 @@
 setup.cfg
 setup.py
+scripts/check_repo.py
 scripts/getting_data.py
 uziela/__init__.py
+uziela/session2.py
+uziela/session3.py
 uziela.egg-info/PKG-INFO
 uziela.egg-info/SOURCES.txt
 uziela.egg-info/dependency_links.txt

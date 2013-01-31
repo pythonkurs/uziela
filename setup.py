@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '0.1'
+version = '0.2'
 
 setup(name='uziela',
       version=version,
-      scripts = ['scripts/getting_data.py'],
+      scripts = ['scripts/getting_data.py', 'scripts/check_repo.py'],
       description="package for python course",
       long_description="""\
 package for python course where I will put my code""",
