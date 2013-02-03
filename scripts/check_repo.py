@@ -17,11 +17,14 @@ def test2():
     repo = CourseRepo("uziela")
     print(repo.check())
 
-try:
-    target_dir = os.path.abspath(sys.argv[1])
-except OSError:
-    sys.exit("Entered directory does not exist. Usage: check_repo.py <dir_name>")
 
+if len(sys.argv) != 2:
+    sys.exit("Please supply target directory. Usage: check_repo.py <dir_name>")
+
+if not os.path.exists(sys.argv[1]):
+    sys.exit("Entered directory does not exist. Usage: check_repo.py <dir_name>")
+    
+target_dir = os.path.abspath(sys.argv[1])
 lastname = os.path.basename(target_dir)
 
 with repo_dir(target_dir):
