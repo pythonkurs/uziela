@@ -16,8 +16,8 @@ class CourseRepo(object):
         self.surname = surname
     def check(self):
         answer = True
-        for i in range(len(self.required)):
-            if not os.path.exists(self.required[i]):
+        for elem in self.required:
+            if not os.path.exists(elem):
                 answer = False
         return answer
 
