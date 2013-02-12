@@ -10,4 +10,5 @@ uziela.egg-info/SOURCES.txt
 uziela.egg-info/dependency_links.txt
 uziela.egg-info/entry_points.txt
 uziela.egg-info/not-zip-safe
+uziela.egg-info/requires.txt
 uziela.egg-info/top_level.txt

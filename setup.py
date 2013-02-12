@@ -19,7 +19,8 @@ package for python course where I will put my code""",
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          # -*- Extra requirements: -*-
+          "untangle",
+          "requests",
       ],
       entry_points="""
       # -*- Entry points: -*-
