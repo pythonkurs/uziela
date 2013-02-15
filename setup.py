@@ -21,8 +21,10 @@ package for python course where I will put my code""",
       install_requires=[
           "untangle",
           "requests",
-          "datetime",
+          "dateutil",
           "pandas",
+          "getpass",
+          "collections",
       ],
       entry_points="""
       # -*- Entry points: -*-
