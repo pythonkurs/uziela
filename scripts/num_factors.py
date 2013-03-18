@@ -7,6 +7,7 @@ from sets import Set
 from collections import Counter
 import multiprocessing
 from IPython.parallel import Client
+from IPython.parallel import require
 
 ################################ Usage ################################
 
@@ -77,36 +78,13 @@ elif MODE == "i":
     cli = Client()
     dview = cli[:]
 
-    ########### does not work... But how do I make it work?.. ##########
-    #@dview.parallel(block=True)
-    #def count_unique_factors_interactive(n):
-    #    return count_unique_factors(n)
-
+    dview["factorize"] = factorize
+    dview["count_unique_factors"] = count_unique_factors
+    dview["Set"] = Set
     @dview.parallel(block=True)
-    def factorize_interactive(n):
-        if n < 2:
-            return []
-        factors = []
-        p = 2 
-
-        while True:
-            if n == 1:
-                return factors
-            r = n % p 
-            if r == 0:
-                factors.append(p)
-                n = n / p 
-            elif p * p >= n:
-                factors.append(n)
-                return factors
-            elif p > 2:
-                p += 2
-            else:
-                p += 1 
-
-    result = factorize_interactive.map(range(2, 500001))
-    uniq_list = []
-    for elem in result:
-        uniq_list.append(len(Set(elem)))
+    def count_unique_factors_interactive(n):
+        return count_unique_factors(n)
+    
+    uniq_list = count_unique_factors_interactive.map(range(2, 500001))
     print(dict(Counter(uniq_list)))
 
