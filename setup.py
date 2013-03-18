@@ -5,7 +5,7 @@ version = '0.2'
 
 setup(name='uziela',
       version=version,
-      scripts = ['scripts/getting_data.py', 'scripts/check_repo.py'],
+      scripts = ['scripts/getting_data.py', 'scripts/check_repo.py', 'num_factors.py'],
       description="package for python course",
       long_description="""\
 package for python course where I will put my code""",
@@ -25,6 +25,9 @@ package for python course where I will put my code""",
           "pandas",
           "getpass",
           "collections",
+          "multiprocessing",
+          "sets",
+          "IPython.parallel"
       ],
       entry_points="""
       # -*- Entry points: -*-
