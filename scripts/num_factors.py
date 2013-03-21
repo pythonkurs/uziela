@@ -58,19 +58,20 @@ def count_unique_factors(n):
 
 # Constants
 MODE = sys.argv[1]
+N_FACTOR = 500001
 
 ################################ Main script ################################
     
 if MODE == "s":
     print "Running %s in serial mode" % script_name
     uniq_list = []
-    for i in xrange(2, 500001):
+    for i in xrange(2, N_FACTOR):
         uniq_list.append(count_unique_factors(i))
     print(dict(Counter(uniq_list)))
 elif MODE == "m":
     print "Running %s in multiprocessing mode" % script_name
     pool = multiprocessing.Pool(processes=4)
-    results = pool.map_async(count_unique_factors, xrange(2, 500001))
+    results = pool.map_async(count_unique_factors, xrange(2, N_FACTOR))
     uniq_list = results.get()
     print(dict(Counter(uniq_list)))
 elif MODE == "i":
@@ -85,6 +86,6 @@ elif MODE == "i":
     def count_unique_factors_interactive(n):
         return count_unique_factors(n)
     
-    uniq_list = count_unique_factors_interactive.map(range(2, 500001))
+    uniq_list = count_unique_factors_interactive.map(xrange(2, N_FACTOR))
     print(dict(Counter(uniq_list)))
 
